@@ -22,10 +22,8 @@
       rel="stylesheet"
       href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-    <script>
-      dayjs().format();
-    </script>
+    
+   
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Task Board</title>
   </head>
@@ -49,7 +47,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Task</h5>
+        <h5 class="modal-title" id="closeButton">Task</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -57,7 +55,7 @@
           <input id="taskName" type="text" placeholder="Task Name" />
           <input id="taskDes"type="text" placeholder="Description" />
           <input id="dueDate" type="date" placeholder="Due Date" />
-          <button id="submit-task" onclick="{onclose}"> Submit Task</button> </span>
+          <!-- <button id="submit-task" onclick="{onclose}"> Submit Task</button> </span> -->
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -100,19 +98,20 @@
           </div>
         </div>
       </div>
-    </div>
-<ul id="cardContent">
-  <li></li>
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Task Card </h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </ul>
+    <section class="taskCard">
+
+    </section>
   </div>
+<div id="cardContent" class="taskCard"  class="sortable">
+  <div class="py-3">
+            <ul class="taskCard" id="cardContent"></ul>
+          </div>
+
+<h2></h2>
+<p></p>
+<p></p>
+
 </div>
-
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -125,7 +124,14 @@
       integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
       crossorigin="anonymous"
     ></script>
+ <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
+ <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script>
+      dayjs().format();
+    </script>
     <script src="./assets/js/script.js"></script>
+
   </body>
 </html>
